@@ -1,4 +1,63 @@
 .header {
-  background-color: blue;
-  color: #fff;
+  .header__inner {
+    @include breakpoint(sm) {
+      padding-top: 65px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__content-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: 47px;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__langs-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(lg) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: 30px;
+      transform: translateY(250%);
+    }
+  }
+
+  &__lang {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: $second-text-color;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+      font-size: 34px;
+    }
+
+    &_active {
+      color: $primary-text-color
+    }
+  }
+
+  &__rus {
+    border-bottom: solid $dark-bgc 4px;
+  }
 }

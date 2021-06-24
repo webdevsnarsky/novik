@@ -1,0 +1,52 @@
+.header__burger {
+  display: none;
+  @include breakpoint(lg) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 33px;
+    cursor: pointer;
+    z-index: 999;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.header__line {
+  width: 100%;
+  height: 4px;
+  background-color: $dark-bgc;
+  transition: all 0.5s ease;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: $dark-bgc;
+    transition: all 0.5s ease;
+  }
+
+  &::after {
+    transform: translateY(-8px);
+  }
+
+  &::before {
+    transform: translateY(8px);
+  }
+}
+
+.header__burger-active .header__line {
+  background-color: transparent;
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

@@ -113,7 +113,7 @@ gulp.task('serve', function() {
     gulp.watch('./app/assets/scss/**/*.scss', gulp.parallel('sass'));
     gulp.watch('./app/*.html').on('change', browserSync.reload);
     gulp.watch('./app/img/**/*.{jpg,jpeg,png,webp,svg,gif}').on('change', browserSync.reload);
-    gulp.watch(['./app/assets/js/*.js', '!app/assets/js/*.min.js'], gulp.parallel('js'));
+    gulp.watch(['./app/assets/js/**/*.js', '!app/assets/js/*.min.js'], gulp.parallel('js'));
     gulp.watch('./app/view/**/*.html').on('change', browserSync.reload);;
 });
 

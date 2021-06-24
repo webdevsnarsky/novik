@@ -1,0 +1,61 @@
+.header__menu-wrap {
+  @include breakpoint(lg) {
+    opacity: 0;
+    overflow: hidden;
+    z-index: -99;
+    transition: $fast;
+    position: relative;
+  }
+
+  &_active {
+    @include breakpoint(lg) {
+      position: static;
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+      z-index: 998;
+    }
+  }
+
+  .header__nav {
+    @include breakpoint(lg) {
+      padding-top: 65px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $primary-bgc;
+    }
+
+    &_active {
+      width: 100%;
+      height: 100%; 
+      overflow: scroll;  
+    }
+  }
+
+  .header__menu {
+    margin: 0;
+
+    &-item {
+      list-style-type: none;
+
+      @include breakpoint(lg) {
+        margin-bottom: 65px;
+      }
+    }
+
+    &-link {
+      display: block;
+      text-decoration: none;
+      color: $second-text-color;
+      font-weight: bold;
+      font-size: 34px;
+
+      &_active {
+        color: $primary-text-color;
+      }
+    }
+  }
+
+
+}
