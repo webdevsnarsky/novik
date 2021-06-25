@@ -1,12 +1,17 @@
 .about {
   background-color: $primary-bgc-meduim;
   &__inner {
+    margin: 0 auto;
+    max-width: 50%;
     padding-top: 70px;
     padding-bottom: 65px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include breakpoint(lg) {
+      max-width: 100%;
+    }
 
     p { 
       margin: 30px 0;

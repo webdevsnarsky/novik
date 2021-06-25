@@ -11,9 +11,7 @@
 
   &__items {
     display: flex;
-    @include breakpoint(lg) {
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
 
   &__item {
@@ -23,7 +21,11 @@
     align-items: center;
 
     &-image {
-      margin-bottom: 33px;
+      width: 100%;
+      margin-bottom: 45px;
+      @include breakpoint(lg) {
+        margin-bottom: 33px;
+      }
     }
 
     &-link {

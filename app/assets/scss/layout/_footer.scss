@@ -3,7 +3,10 @@
   background-color: $primary-bgc;
 
   &__inner {
-    padding: 80px 0;
+    padding: 115px 0 120px;
+    @include breakpoint(lg) {
+      padding: 80px 0;
+    }
   }
 
   &__descr {
@@ -15,9 +18,7 @@
   }
 
   &__message {
-    margin-bottom: 48px;
     padding: 12px 95px;
-    display: block;
     text-align: center;
     text-decoration: none;
     color: $third-text-color;
@@ -27,9 +28,15 @@
     font-size: 18px;
     line-height: 22.28px;
     cursor: pointer;
+    &-wrap {
+      text-align: center;
+      margin-bottom: 48px;
+    }
   }
 
   &__socials {
+    display: flex;
+    justify-content: center;
     &-items {
       padding: 0;
       margin-bottom: 50px;

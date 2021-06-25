@@ -2,6 +2,9 @@
   &__inner {
     padding-top: 70px;
     padding-bottom: 80px;
+    @include breakpoint(lg) {
+      padding-bottom: 0;
+    }
   }
 
   &__descr {
@@ -24,6 +27,10 @@
   &__item {
     margin-bottom: 80px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
     &-image {
       margin: 0 auto;
@@ -40,6 +47,9 @@
     }
 
     &-stars {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      grid-column-gap: 10px;
       &[data-mark="5"] .skills__item-star:nth-child(-n + 4) {
         background: center / cover no-repeat url(../img/fill-star.svg);
       }
