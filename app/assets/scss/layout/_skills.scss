@@ -1,0 +1,71 @@
+.skills {
+  &__inner {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  &__descr {
+    margin-bottom: 70px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.83px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    margin-bottom: 80px;
+    text-align: center;
+
+    &-image {
+      margin: 0 auto;
+      max-height: 90px;
+    }
+
+    &-title {
+      margin: 23px auto 40px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17.33px;
+      color: $second-text-color;
+      max-width: 80px;
+    }
+
+    &-stars {
+      &[data-mark="5"] .skills__item-star:nth-child(-n + 4) {
+        background: center / cover no-repeat url(../img/fill-star.svg);
+      }
+
+      &[data-mark="4"] .skills__item-star:nth-child(-n + 4) {
+        background: center / cover no-repeat url(../img/fill-star.svg);
+      }
+
+      &[data-mark="3"] .skills__item-star:nth-child(-n + 3) {
+        background: center / cover no-repeat url(../img/fill-star.svg);
+      }
+
+      &[data-mark="2"] .skills__item-star:nth-child(-n + 2) {
+        background: center / cover no-repeat url(../img/fill-star.svg);
+      }
+
+      &[data-mark="1"] .skills__item-star:nth-child(-n + 1) {
+        background: center / cover no-repeat url(../img/fill-star.svg);
+      }
+    }
+
+    &-star {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: center / cover no-repeat url(../img/empty-star.svg);
+    }
+  }
+}
